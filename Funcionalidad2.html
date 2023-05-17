@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Noticias de Ultima Hora Laboratorio 4</title>
+  <style>
+    /* Estilos para el carrusel */
+    .carousel {
+      width: 600px;
+      height: 400px;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .carousel ul {
+      width: 300%;
+      height: 400px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .carousel li {
+      width: 33.33%;
+      height: 400px;
+      float: left;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Estilos para la sección de noticias */
+    .news-section {
+      margin-top: 20px;
+    }
+
+    .news-section h2 {
+      text-align: center;
+    }
+
+    .news-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .news-item {
+      width: 300px;
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="carousel">
+    <ul>
+      <li><img src="https://phantom-marca.unidadeditorial.es/f7f0a7fc98ae8ac1c1bbe970c96d307e/resize/660/f/webp/assets/multimedia/imagenes/2023/05/16/16842633179532.jpg" alt="Imagen 1"></li>
+      <li><img src="https://phantom-marca.unidadeditorial.es/b3c566b4f998e4eb76c73716c65a1caa/crop/0x0/1319x878/resize/660/f/webp/assets/multimedia/imagenes/2023/05/16/16842379522831.jpg" alt="Imagen 2"></li>
+      <li><img src="https://cdn.nba.com/manage/2023/04/Image-from-iOS.jpg" alt="Imagen 3"></li>
+    </ul>
+  </div>
+
+  <div class="news-section">
+    <h2>Noticias </h2>
+    <div class="news-list">
+      <div class="news-item">
+        <h3>Nueva normativa para ser candidato a los Oscar</h3>
+        <p>La reconocida Academia de Artes y Ciencias de Cinematográficas, 
+            organizadora de los Óscar, ha presentado sus nuevos estándares 
+            para poder elegir a los candidatos a los premios. Se exige representar a las minorías, 
+            buscando así una mayor inclusión en Hollywood.</p>
+        
+    </p>
+      </div>
+      <div class="news-item">
+        <h3>La champiosn League</h3>
+        <p>La UEFA Champions League de la temporada 2022-2023 va llegando a su final. 
+            Real Madrid, Manchester City, Milan e Inter pelean por llegar a la ansiada final donde pelarán por el título. Los madridistas buscan su decimoquinto trofeo; 
+            los ingleses, el primero; el equipo 'rossonero', el octavo; y el Inter de Milan, el cuarto.</p>
+      </div>
+      <div class="news-item">
+        <h3>NBA</h3>
+        <p>Los Denver Nuggets y Los Ángeles Lakers comienzan su lucha en la final del Oeste. Los primeros, que acabaron como lideres de Conferencia, 
+            tratarán de hacer valer el factor cancha ante un conjunto angelino que llegó procedente del play-in pero ya se ha cargado a los Grizzlies y a los campeones Warriors.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Lógica para el carrusel
+    const carousel = document.querySelector('.carousel');
+    const carouselList = carousel.querySelector('ul');
+    const carouselItems = carousel.querySelectorAll('li');
+
+    let currentIndex = 0;
+    const carouselWidth = carousel.offsetWidth;
+    const totalItems = carouselItems.length;
+
+    carouselList.style.width = `${totalItems * 100}%`;
+
+    function goToItem(index) {
+      if (index < 0 || index >= totalItems) return;
+
+      carouselList.style.transform = `translateX(-${index * carouselWidth}px)`;
+      currentIndex = index;
+    }
+
+    setInterval(() => {
+      goToItem((currentIndex + 1) % totalItems);
+    }, 3000);
+  </script>
+</body>
+</html>
