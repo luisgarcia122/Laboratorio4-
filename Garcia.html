@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Garcia</title>
+
+</head>
+
+<style>
+     * {
+        box-sizing: border-box;
+    }
+    
+     :root {
+        --color-de-fondo: #090f3d;
+    }
+    
+    body {
+        padding-bottom: 5em;
+        background-color: cornflowerblue;
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .Encabezado {
+        padding-top: 0.1px;
+        width: 1000px;
+        height: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+        background-blend-mode: color;
+        background-size: cover;
+        background-repeat: no-repeat;
+        box-shadow: 0 10px 10px 0 lightyellow;
+        border-radius: 20px;
+        text-align: center;
+        background-color: navy;
+    }
+    
+    .perfil {
+        width: 150px;
+        height: 125px;
+        margin: 10px 0px 0px 0px;
+        border: 3px solid white;
+        border-radius: 50%;
+    }
+    
+    .Nombre {
+        background-color: var(--color-de-fondo);
+        border-radius: 20px;
+        color: lightyellow;
+        margin: 10px auto;
+        text-align: center;
+        font-family: serif;
+        font-size: 50px;
+        font-style: italic;
+        letter-spacing: 2px;
+    }
+    
+    .Cambio .Section {
+        width: 70%;
+        padding: 10px;
+        margin: 0 auto 40px;
+        background-color: var(--color-de-fondo);
+        border-radius: 20px;
+        color: white;
+        font-size: 1.3rem;
+        text-align: justify;
+        transition: .5s ease-in-out;
+    }
+    
+    p {
+        margin: 20px;
+    }
+    
+    .Cambio .Title {
+        max-width: 270px;
+        margin: 0 auto 20px;
+        font-family: serif;
+        border: 5px solid white;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 2rem;
+    }
+    
+    .img {
+        border-radius: 2px;
+        border: 3px double white;
+        height: 350px;
+        width: 300px;
+        margin: 10px auto 10px;
+        display: block;
+        box-shadow: 0 10px 10px -5px skyblue;
+    }
+    
+    .Section:hover {
+        background-color: #1123af;
+    }
+    
+    td,
+    th {
+        text-align: center;
+        padding: 0.5em;
+        border: 2px solid white
+    }
+    
+    table {
+        margin: 0px auto 10px;
+        border: 2px solid white;
+        border-collapse: collapse;
+    }
+    
+    table .Selected {
+        background-color: white;
+        color: var(--color-de-fondo);
+    }
+    
+    li {
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+    
+    progress {
+        width: 300px;
+        background-color: white;
+        border-radius: 10px;
+        border: 1px dashed black;
+    }
+    
+    progress::-moz-progress-bar {
+        background-color: lime;
+        border-radius: 10px;
+    }
+    
+    #Contact {
+        text-align: center;
+    }
+    
+    .icon {
+        background-color: white;
+        height: 90px;
+        width: 90px;
+        border-radius: 50%;
+        margin: 0 20px 20px;
+    }
+    
+    .iconig {
+        height: 160px;
+        width: 160px;
+        margin: 25px 0 10px;
+    }
+
+    a{
+        font-style: none;
+        color: aliceblue;
+    }
+</style>
+
+<body>
+    <div class="Encabezado">
+        <img class="perfil" src="./img/IMG_20200519_153228.jpg" alt="">
+        <p class="Nombre">Luis García</p>
+    </div>
+    <div class="Cambio">
+        <div class="Section">
+            <h1 class="Title">Presentacion</h1>
+            <p> Hola soy <strong>Luis Garcia</strong> soy estudiante de 3er año de la carrera de Ingieneria de software tengo 20 años y me interese por la programacion desde los 16 años.</p>
+            <img class="img" src="./img/ejecutivo.jpg" alt="">
+        </div>
+
+        <div class="Section">
+            <h1 class="Title">Habilidades</h1>
+            <ul>
+                <li>C++ <br>
+                    <progress min="0" max="100" value="70"></progress>
+                </li>
+                <li>C <br>
+                    <progress min="0" max="100" value="65"></progress>
+                </li>
+                <li>HTML <br>
+                    <progress min="0" max="100" value="80"></progress>
+                </li>
+                <li>CSS <br>
+                    <progress min="0" max="100" value="60"></progress>
+                </li>
+            </ul>
+        </div>
+        <div class="Section" id="Contact">
+            <h1 class="Title">Proyectos en Github</h1>
+
+            <ul>
+                <li><a href="https://github.com/luisgarcia122/Laboratorio4-.git">Repositorio 1 </a></li>
+                <li><a href="https://github.com/luisgarcia122/my-sample-project2.git">Repositorio 2</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
